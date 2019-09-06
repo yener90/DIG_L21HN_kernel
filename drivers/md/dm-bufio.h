@@ -26,7 +26,6 @@ dm_bufio_client_create(struct block_device *bdev, unsigned block_size,
 		       void (*alloc_callback)(struct dm_buffer *),
 		       void (*write_callback)(struct dm_buffer *));
 
-
 /*
  * Release a buffered IO cache.
  */

@@ -22,7 +22,7 @@
 #include <linux/wakelock.h>
 #include "power.h"
 
-/*
+/* 
  * Timeout for stopping processes
  */
 unsigned int __read_mostly freeze_timeout_msecs = 20 * MSEC_PER_SEC;

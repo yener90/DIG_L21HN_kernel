@@ -1,4 +1,14 @@
-
+/* Copyright (c) 2013-2016, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
 #include <linux/io.h>
 #include <media/v4l2-subdev.h>
 #include <asm/div64.h>
@@ -3841,6 +3851,7 @@ void msm_isp_process_axi_irq(struct vfe_device *vfe_dev,
 		get_wm_mask(irq_status0, irq_status1);
 	if (!(comp_mask || wm_mask) || vfe_dev->ignore_irq)
 		return;
+
 	ISP_DBG("%s: status: 0x%x\n", __func__, irq_status0);
 
 	for (i = 0; i < axi_data->hw_info->num_comp_mask; i++) {
